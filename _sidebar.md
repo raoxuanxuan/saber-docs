@@ -4,6 +4,14 @@
   - AAPL
     - [机构持仓追踪报告](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/AAPL/AAPL_institutional_holdings.md)
   - CRCL
+    - [综合投资分析报告 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/06_comprehensive_report.md)
+    - [报告索引 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/00_INDEX.md)
+    - [数据收集 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/01_data_collection.md)
+    - [基本面分析 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/02_fundamental_analysis.md)
+    - [财务分析 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/03_financial_analysis.md)
+    - [估值分析 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/04_valuation_analysis.md)
+    - [交叉验证 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/05_cross_validation.md)
+    - [技术分析 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/07_technical_analysis.md)
     - [新闻分析报告 (02-20)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/CRCL_news_analysis_20260220.md)
   - HIMS
     - [估值分析 (02-02)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HIMS/HIMS_valuation_analysis_20260202.md)
