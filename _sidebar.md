@@ -22,6 +22,16 @@
     - [新闻分析 (02-22)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/LMND/08_%E6%96%B0%E9%97%BB%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md)
     - [机构持仓分析 (02-22)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/LMND/11_%E6%9C%BA%E6%9E%84%E6%8C%81%E4%BB%93%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md)
     - [目标价追踪 (02-22)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/LMND/12_%E7%9B%AE%E6%A0%87%E4%BB%B7%E8%BF%BD%E8%B8%AA%E6%8A%A5%E5%91%8A.md)
+  - CRWV
+    - [综合投资报告 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/06_comprehensive_report.md)
+    - [报告索引 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/00_INDEX.md)
+    - [基本面分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/02_fundamental_analysis.md)
+    - [财务分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/03_financial_analysis.md)
+    - [估值分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/04_valuation_analysis.md)
+    - [交叉验证 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/05_cross_validation.md)
+    - [新闻分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/08_news_analysis.md)
+    - [机构持仓分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/11_institutional_holdings.md)
+    - [目标价追踪 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/12_target_price_tracker.md)
   - CRCL
     - [综合投资分析报告 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/06_comprehensive_report.md)
     - [报告索引 (02-21)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRCL/00_INDEX.md)
