@@ -64,6 +64,7 @@
     - [新闻分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HIMS/08_news_analysis.md)
     - [机构持仓分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HIMS/11_institutional_holdings.md)
     - [目标价追踪 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HIMS/12_target_price_tracker.md)
+    - [Q4 2025 财报深度分析 (02-24)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HIMS/HIMS_Q4_2025_earnings_analysis.md)
   - IREN
     - [综合投资报告 (02-22)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/IREN/06_%E7%BB%BC%E5%90%88%E6%8A%95%E8%B5%84%E6%8A%A5%E5%91%8A.md)
     - [报告索引 (02-22)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/IREN/README.md)
