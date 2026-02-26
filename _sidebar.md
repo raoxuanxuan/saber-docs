@@ -109,6 +109,8 @@
       - [新闻分析 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRM/08_news_analysis.md)
       - [机构持仓分析 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRM/11_institutional_holdings.md)
       - [目标价追踪 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRM/12_target_price_tracker.md)
+  - HBM
+    - [HBM行业深度研究报告 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HBM/HBM_%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A_20260226.md)
   - SATS
     - [新闻分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_news_analysis_20260201.md)
     - [估值分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_valuation_analysis_20260201.md)
