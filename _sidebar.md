@@ -34,6 +34,9 @@
     - [机构持仓分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/LITE/11_institutional_holdings.md)
     - [目标价追踪 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/LITE/12_target_price_tracker.md)
   - CRWV
+    - 🆕 Q4/FY2025 财报深度分析 (02-27)
+      - [财报与财务分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/CRWV_Q4FY2025_earnings_analysis_20260227.md)
+    - 历史分析 (02-23)
     - [综合投资报告 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/06_comprehensive_report.md)
     - [报告索引 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/00_INDEX.md)
     - [基本面分析 (02-23)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRWV/reports/CRWV_20260223/02_fundamental_analysis.md)
