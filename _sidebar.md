@@ -114,6 +114,18 @@
       - [目标价追踪 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/CRM/12_target_price_tracker.md)
   - HBM
     - [HBM行业深度研究报告 (02-26)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/HBM/HBM_%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A_20260226.md)
+  - TSLA
+    - 🆕 全面投资分析 (02-27)
+      - [📋 报告总索引 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/00_INDEX.md)
+      - [综合投资报告 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/06_comprehensive_report.md)
+      - [数据收集 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/01_data_collection.md)
+      - [基本面分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/02_fundamental_analysis.md)
+      - [财务分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/03_financial_analysis.md)
+      - [估值分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/04_valuation_analysis.md)
+      - [交叉验证 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/05_cross_validation.md)
+      - [新闻分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/08_news_analysis.md)
+      - [机构持仓分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/11_institutional_holdings.md)
+      - [目标价追踪 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/12_target_price_tracker.md)
   - SATS
     - [新闻分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_news_analysis_20260201.md)
     - [估值分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_valuation_analysis_20260201.md)
