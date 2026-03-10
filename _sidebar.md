@@ -140,3 +140,4 @@
 - [Twitter Feed](/twitter-feed/)
   - [@karpathy 推文](/twitter-feed/karpathy/)
   - [@elonmusk 推文](/twitter-feed/elonmusk/)
+  - [@NuttyCLD 推文](/twitter-feed/NuttyCLD/)
