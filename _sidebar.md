@@ -126,6 +126,8 @@
       - [新闻分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/08_news_analysis.md)
       - [机构持仓分析 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/11_institutional_holdings.md)
       - [目标价追踪 (02-27)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/TSLA/12_target_price_tracker.md)
+  - ORCL
+    - [财报深度分析](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/ORCL/ORCL_earnings_analysis.md)
   - SATS
     - [新闻分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_news_analysis_20260201.md)
     - [估值分析报告 (02-01)](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/SATS/SATS_valuation_analysis_20260201.md)
