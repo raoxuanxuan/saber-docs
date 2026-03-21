@@ -142,6 +142,11 @@
     - [综合投资分析报告](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD_%E7%BB%BC%E5%90%88%E6%8A%95%E8%B5%84%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20260204.md)
 
 - [Twitter Feed](/twitter-feed/)
+  - [监控用户](/twitter-feed/)
+  - 最新内容
+    - [@karpathy](/twitter-feed/karpathy/)
+    - [@elonmusk](/twitter-feed/elonmusk/)
+    - [@NuttyCLD](/twitter-feed/NuttyCLD/)
   - [@karpathy 推文](/twitter-feed/karpathy/)
   - [@elonmusk 推文](/twitter-feed/elonmusk/)
   - [@NuttyCLD 推文](/twitter-feed/NuttyCLD/)

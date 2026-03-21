@@ -6,6 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css">
+  <style>
+    .unread-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #ff4444;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .unread-badge {
+      display: inline-block;
+      background-color: #ff4444;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -21,6 +44,106 @@
       },
       auto2top: true,
       sidebarDisplayLevel: 1,
+      plugins: [
+        function(hook, vm) {
+          var STORAGE_KEY = 'twitter-feed-read';
+
+          function getReadSet() {
+            return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+          }
+
+          function saveReadSet(readSet) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify([...readSet]));
+          }
+
+          function normalizePath(href) {
+            var p = href.replace(/^#/, '');
+            if (!p.startsWith('/')) p = '/' + p;
+            p = p.replace(/\.md$/, '');
+            return p;
+          }
+
+          hook.doneEach(function() {
+            var path = vm.route.path;
+            var readSet = getReadSet();
+
+            // Mark current tweet as read when visiting it
+            if (/^\/twitter-feed\/[^\/]+\/\d{4}-/.test(path)) {
+              readSet.add(path);
+              saveReadSet(readSet);
+            }
+
+            // On main twitter-feed page or user feed pages, add unread indicators
+            if (path === '/twitter-feed/' || path === '/twitter-feed') {
+              var content = document.querySelector('#main .markdown-section');
+              if (!content) return;
+
+              var allLinks = content.querySelectorAll('a[href]');
+              var unreadByUser = {};
+
+              allLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+
+                var normalized = normalizePath(href);
+                var match = normalized.match(/^\/twitter-feed\/([^\/]+)\/\d{4}-/);
+                if (match) {
+                  var user = match[1];
+                  if (!readSet.has(normalized)) {
+                    // Add red dot before the link text
+                    if (!link.querySelector('.unread-dot')) {
+                      var dot = document.createElement('span');
+                      dot.className = 'unread-dot';
+                      dot.title = '未读';
+                      link.insertBefore(dot, link.firstChild);
+                    }
+                    unreadByUser[user] = (unreadByUser[user] || 0) + 1;
+                  }
+                }
+              });
+
+              // Add unread count badges to user section headings (h3)
+              var headings = content.querySelectorAll('h3');
+              headings.forEach(function(h) {
+                var text = h.textContent;
+                Object.keys(unreadByUser).forEach(function(user) {
+                  if (text.includes('@' + user)) {
+                    if (!h.querySelector('.unread-badge')) {
+                      var badge = document.createElement('span');
+                      badge.className = 'unread-badge';
+                      badge.textContent = unreadByUser[user];
+                      badge.title = unreadByUser[user] + ' 篇未读';
+                      h.appendChild(badge);
+                    }
+                  }
+                });
+              });
+            }
+
+            // On user feed pages, add unread dots too
+            var userFeedMatch = path.match(/^\/twitter-feed\/([^\/]+)\/$/);
+            if (userFeedMatch || path.match(/^\/twitter-feed\/[^\/]+$/)) {
+              var content = document.querySelector('#main .markdown-section');
+              if (!content) return;
+
+              content.querySelectorAll('a[href]').forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+
+                var normalized = normalizePath(href);
+                if (/^\/twitter-feed\/[^\/]+\/\d{4}-/.test(normalized) && !readSet.has(normalized)) {
+                  if (!link.querySelector('.unread-dot')) {
+                    var dot = document.createElement('span');
+                    dot.className = 'unread-dot';
+                    dot.title = '未读';
+                    link.insertBefore(dot, link.firstChild);
+                  }
+                }
+              });
+            }
+          });
+        }
+      ],
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
