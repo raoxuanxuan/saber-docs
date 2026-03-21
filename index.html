@@ -28,6 +28,11 @@
       margin-left: 8px;
       vertical-align: middle;
     }
+    .all-read-hint {
+      color: #999;
+      font-style: italic;
+      padding: 8px 0;
+    }
   </style>
 </head>
 <body>
@@ -49,93 +54,120 @@
           var STORAGE_KEY = 'twitter-feed-read';
 
           function getReadSet() {
-            return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+            try {
+              return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+            } catch(e) {
+              return new Set();
+            }
           }
 
           function saveReadSet(readSet) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify([...readSet]));
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(readSet)));
           }
 
           function normalizePath(href) {
-            var p = href.replace(/^#/, '');
+            if (!href) return '';
+            var p = href;
+            if (p.startsWith('#/')) p = p.substring(1);
+            else if (p.startsWith('#')) p = '/' + p.substring(1);
             if (!p.startsWith('/')) p = '/' + p;
             p = p.replace(/\.md$/, '');
             return p;
+          }
+
+          function isTweetLink(path) {
+            return /^\/twitter-feed\/[^\/]+\/\d{4}-\d{2}-\d{2}-/.test(path);
           }
 
           hook.doneEach(function() {
             var path = vm.route.path;
             var readSet = getReadSet();
 
-            // Mark current tweet as read when visiting it
-            if (/^\/twitter-feed\/[^\/]+\/\d{4}-/.test(path)) {
+            // Mark current tweet as read
+            if (isTweetLink(path)) {
               readSet.add(path);
               saveReadSet(readSet);
             }
 
-            // On main twitter-feed page or user feed pages, add unread indicators
+            // Main twitter-feed page: hide read articles, show red dots on unread
             if (path === '/twitter-feed/' || path === '/twitter-feed') {
-              var content = document.querySelector('#main .markdown-section');
+              var content = document.querySelector('.markdown-section');
               if (!content) return;
 
-              var allLinks = content.querySelectorAll('a[href]');
-              var unreadByUser = {};
+              var h3List = content.querySelectorAll('h3');
+              var anyUnread = false;
 
-              allLinks.forEach(function(link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
+              h3List.forEach(function(h3) {
+                var ul = h3.nextElementSibling;
+                if (!ul || ul.tagName !== 'UL') return;
 
-                var normalized = normalizePath(href);
-                var match = normalized.match(/^\/twitter-feed\/([^\/]+)\/\d{4}-/);
-                if (match) {
-                  var user = match[1];
-                  if (!readSet.has(normalized)) {
-                    // Add red dot before the link text
+                var lis = ul.querySelectorAll('li');
+                var unreadCount = 0;
+                var totalCount = 0;
+
+                lis.forEach(function(li) {
+                  var link = li.querySelector('a[href]');
+                  if (!link) return;
+                  var normalized = normalizePath(link.getAttribute('href'));
+                  if (!isTweetLink(normalized)) return;
+
+                  totalCount++;
+                  if (readSet.has(normalized)) {
+                    li.style.display = 'none';
+                  } else {
+                    unreadCount++;
                     if (!link.querySelector('.unread-dot')) {
                       var dot = document.createElement('span');
                       dot.className = 'unread-dot';
-                      dot.title = '未读';
                       link.insertBefore(dot, link.firstChild);
                     }
-                    unreadByUser[user] = (unreadByUser[user] || 0) + 1;
+                  }
+                });
+
+                if (totalCount > 0 && unreadCount === 0) {
+                  h3.style.display = 'none';
+                  ul.style.display = 'none';
+                } else if (unreadCount > 0) {
+                  anyUnread = true;
+                  if (!h3.querySelector('.unread-badge')) {
+                    var badge = document.createElement('span');
+                    badge.className = 'unread-badge';
+                    badge.textContent = unreadCount;
+                    badge.title = unreadCount + ' 篇未读';
+                    h3.appendChild(badge);
                   }
                 }
               });
 
-              // Add unread count badges to user section headings (h3)
-              var headings = content.querySelectorAll('h3');
-              headings.forEach(function(h) {
-                var text = h.textContent;
-                Object.keys(unreadByUser).forEach(function(user) {
-                  if (text.includes('@' + user)) {
-                    if (!h.querySelector('.unread-badge')) {
-                      var badge = document.createElement('span');
-                      badge.className = 'unread-badge';
-                      badge.textContent = unreadByUser[user];
-                      badge.title = unreadByUser[user] + ' 篇未读';
-                      h.appendChild(badge);
+              if (!anyUnread && h3List.length > 0) {
+                var h2List = content.querySelectorAll('h2');
+                h2List.forEach(function(h2) {
+                  if (h2.textContent.includes('最新内容')) {
+                    var next = h2.nextElementSibling;
+                    if (!next || !next.classList.contains('all-read-hint')) {
+                      var hint = document.createElement('p');
+                      hint.className = 'all-read-hint';
+                      hint.textContent = '所有文章已读，前往各用户推文页面查看历史文章。';
+                      h2.parentNode.insertBefore(hint, h2.nextSibling);
                     }
                   }
                 });
-              });
+              }
             }
 
-            // On user feed pages, add unread dots too
-            var userFeedMatch = path.match(/^\/twitter-feed\/([^\/]+)\/$/);
-            if (userFeedMatch || path.match(/^\/twitter-feed\/[^\/]+$/)) {
-              var content = document.querySelector('#main .markdown-section');
+            // User feed pages: show all articles, red dot on unread
+            var isUserFeed = /^\/twitter-feed\/[^\/]+\/?$/.test(path) &&
+                             path !== '/twitter-feed/' && path !== '/twitter-feed';
+            if (isUserFeed) {
+              var content = document.querySelector('.markdown-section');
               if (!content) return;
 
               content.querySelectorAll('a[href]').forEach(function(link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-
-                var normalized = normalizePath(href);
-                if (/^\/twitter-feed\/[^\/]+\/\d{4}-/.test(normalized) && !readSet.has(normalized)) {
+                var normalized = normalizePath(link.getAttribute('href'));
+                if (isTweetLink(normalized) && !readSet.has(normalized)) {
                   if (!link.querySelector('.unread-dot')) {
                     var dot = document.createElement('span');
                     dot.className = 'unread-dot';
-                    dot.title = '未读';
                     link.insertBefore(dot, link.firstChild);
                   }
                 }
