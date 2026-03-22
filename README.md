@@ -1,4 +1,4 @@
-# Saber Docs
+# Saber Docs <!-- {docsify-ignore-all} -->
 
 > 个人知识库 &mdash; 投资研究 / 产品创意 / 信息追踪
 
