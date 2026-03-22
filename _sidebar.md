@@ -2,7 +2,7 @@
 - **idea**
   - [Suno Music Advisor 技术架构](/idea/ARCHITECTURE.md)
   - 视频BGM卡点生成
-    - [技术总监汇报材料 (03-22)](/idea/%E8%A7%86%E9%A2%91BGM%E5%8D%A1%E7%82%B9%E7%94%9F%E6%88%90-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%9B%91%E6%B1%87%E6%8A%A5%E6%9D%90%E6%96%99.md)
+    - [整体方案 (03-22)](/idea/%E8%A7%86%E9%A2%91BGM%E5%8D%A1%E7%82%B9%E7%94%9F%E6%88%90-%E6%95%B4%E4%BD%93%E6%96%B9%E6%A1%88.md)
     - [详细实现方案 (03-22)](/idea/%E8%A7%86%E9%A2%91BGM%E5%8D%A1%E7%82%B9%E7%94%9F%E6%88%90-%E8%AF%A6%E7%BB%86%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88.md)
 - **company**
   - TME
