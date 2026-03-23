@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "MSG=$(cat | jq -r '.notification // \"Task completed\"'); osascript -e \"display notification \\\"$MSG\\\" with title \\\"Claude Code\\\"\""
+          }
+        ]
+      }
+    ]
+  }
+}

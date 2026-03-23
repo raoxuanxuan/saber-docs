@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"当前分支: $(git branch --show-current)\n最近提交: $(git log --oneline -3)\n未提交变更: $(git status --short)\""
+          }
+        ]
+      }
+    ]
+  }
+}

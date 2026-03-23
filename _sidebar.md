@@ -145,6 +145,12 @@
     - [交叉验证报告](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD_%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%E6%8A%A5%E5%91%8A_20260204.md)
     - [综合投资分析报告](/%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD/%E7%A5%9E%E7%81%AB%E8%82%A1%E4%BB%BD_%E7%BB%BC%E5%90%88%E6%8A%95%E8%B5%84%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A_20260204.md)
 
+- **Claude Code 分享**
+  - [进入CC的世界 (03-23)](/claude-code-sharing/01-%E8%BF%9B%E5%85%A5CC%E7%9A%84%E4%B8%96%E7%95%8C.md)
+  - [最佳实践 (03-23)](/claude-code-sharing/02-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md)
+  - [工程层 (03-23)](/claude-code-sharing/03-%E5%B7%A5%E7%A8%8B%E5%B1%82.md)
+  - [运行时层 (03-23)](/claude-code-sharing/04-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B1%82.md)
+  - [一些玩法 (03-23)](/claude-code-sharing/05-%E4%B8%80%E4%BA%9B%E7%8E%A9%E6%B3%95.md)
 - [**Twitter Feed**](/twitter-feed/)
   - [监控用户](/twitter-feed/)
   - 最新内容

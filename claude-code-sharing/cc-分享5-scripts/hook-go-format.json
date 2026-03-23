@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(cat | jq -r '.tool_input.file_path // \"\"'); [ -n \"$FILE\" ] && [[ \"$FILE\" == *.go ]] && gofmt -w \"$FILE\" || true"
+          }
+        ]
+      }
+    ]
+  }
+}

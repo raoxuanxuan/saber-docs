@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "DONE=.claude/reviews/done; COUNT=$(ls $DONE/*.md 2>/dev/null | wc -l | tr -d ' '); [ \"$COUNT\" -gt 0 ] && echo \"有 $COUNT 条未读审查反馈：\" && ls $DONE/*.md | while read f; do echo \"---\"; cat \"$f\"; done || echo '无待处理审查反馈'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/dev-hook.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

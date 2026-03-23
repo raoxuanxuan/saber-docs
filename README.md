@@ -1,6 +1,6 @@
 # Saber Docs
 
-> 个人知识库 &mdash; 投资研究 / 产品创意 / 信息追踪
+> 个人知识库 &mdash; 投资研究 / 产品创意 / 技术分享 / 信息追踪
 
 ---
 
@@ -33,6 +33,20 @@
 | [Suno Music Advisor](/idea/ARCHITECTURE.md) | 将用户音乐创作意图转化为 Suno AI 高质量 prompt 的系统 |
 | [视频BGM卡点生成 - 整体方案](/idea/视频BGM卡点生成-整体方案.md) | 整体方案：需求背景、架构、选型、资源评估、风险 |
 | [视频BGM卡点生成 - 详细方案](/idea/视频BGM卡点生成-详细实现方案.md) | 完整实现：背景知识、4步Pipeline、代码、gRPC协议、监控 |
+
+---
+
+**Claude Code 分享**
+
+从"会用"到"理解"——Claude Code 架构认知与最佳实践系列。
+
+| 篇目 | 主题 |
+|------|------|
+| [进入CC的世界](/claude-code-sharing/01-%E8%BF%9B%E5%85%A5CC%E7%9A%84%E4%B8%96%E7%95%8C.md) | CC 的能力边界、四层架构、与 Cursor 的区别 |
+| [最佳实践](/claude-code-sharing/02-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5.md) | 模型选择、Prompt 技巧、Plan 模式、上下文管理 |
+| [工程层](/claude-code-sharing/03-%E5%B7%A5%E7%A8%8B%E5%B1%82.md) | CLAUDE.md、Skills、Hooks、MCP、Subagent |
+| [运行时层](/claude-code-sharing/04-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B1%82.md) | 上下文管理、Prompt Cache、Token 优化 |
+| [一些玩法](/claude-code-sharing/05-%E4%B8%80%E4%BA%9B%E7%8E%A9%E6%B3%95.md) | Git Worktree、多角色协作、Hook 实战 |
 
 ---
 
