@@ -4,6 +4,7 @@ Andrej Karpathy — 前 Tesla AI 总监，OpenAI 创始团队
 
 | 日期 | 标题 |
 |------|------|
+| 2026-03-28 | [LLM 辩论双向性与谄媚效应](twitter-feed/karpathy/2026-03-28-2037921699824607591.md) |
 | 2026-03-20 | [Project Hail Mary 影评](twitter-feed/karpathy/2026-03-20-2034865693544604001.md) |
 | 2026-03-18 | [感谢 Jensen 和 NVIDIA 送 DGX](twitter-feed/karpathy/2026-03-18-2034321875506196585.md) |
 | 2026-03-11 | [Autoresearch 实验室被 OAuth 中断摧毁](twitter-feed/karpathy/2026-03-11-2031792523187040643.md) |
